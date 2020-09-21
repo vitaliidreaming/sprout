@@ -5,8 +5,8 @@ from app.misc import RequestValue, BaseDispatcher, Custom1Dispatcher, Custom2Dis
 
 @pytest.mark.parametrize(
     "a,b,c,d,e,f,expected_variant", [
-        (True, True, False, 1, 1, 1, "M"),  # any dangerous math operation
-        (True, True, True, 1, 1, 1, "P"),  # if there will be a need to parametrize for future
+        (True, True, False, 1, 1, 1, "M"),  # There are no any dangerous math operation
+        (True, True, True, 1, 1, 1, "P"),  # if there will be a need, we can parametrize it in future
         (False, True, True, 1, 1, 1, "T"),
     ])
 def test_base_case(a, b, c, d, e, f, expected_variant):
